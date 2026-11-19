@@ -8,3 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface
 UsuarioRepository extends JpaRepository<Usuario,Long> {
 }
+
+///ESTA CLASSE É FEITA PARA A DEFINAÇÃO DE CONTRATO PELA CLASSE, E HERANÇA, E EXTENSÃO,  ONDE FORNECE A OPERAÇÃO DE BUSCAR E CONSULTA NO BANCO DE DADOS
+///(CLASSE DE USUARIO)
+

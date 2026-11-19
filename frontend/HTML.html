@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu banco digital</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+<main class="dashboard">
+
+
+
+    <header class="cabecalho">
+        <h1>Meu Banco</h1>
+        <p id="mensagem-boas-vindas">
+            Bem-vindo, <span id="nome-usuario">cliente</span>!
+        </p>
+    </header>
+
+
+
+
+
+    <section class="cartao-saldo">
+        <p class="rotulo-saldo">Saldo disponível</p>
+
+        <h2 id="saldo">R$ 2.450,00</h2>
+
+        <p class="aviso">
+            Saldo demonstrativo para desenvolvimento
+        </p>
+
+        <div class="acoes">
+            <button type="button" class="botao botao-primario">
+                Depositar
+            </button>
+
+            <button type="button" class="botao botao-secundario">
+                Transferir
+            </button>
+        </div>
+    </section>
+
+
+
+
+    <section class="movimentacoes">
+
+        <h2>Últimas movimentações</h2>
+
+        <div class="movimentacao">
+            <div class="detalhes">
+                <h3>Supermercado</h3>
+                <p>Alimentação</p>
+            </div>
+
+            <span class="valor despesa">- R$ 150,00</span>
+        </div>
+
+        <div class="movimentacao">
+            <div class="detalhes">
+                <h3>Salário</h3>
+                <p>Renda</p>
+            </div>
+
+            <span class="valor receita">+ R$ 2.000,00</span>
+        </div>
+
+        <div class="movimentacao">
+            <div class="detalhes">
+                <h3>Conta de energia</h3>
+                <p>Moradia</p>
+            </div>
+
+            <span class="valor despesa">- R$ 120,00</span>
+        </div>
+    </section>
+
+
+
+    <section class="resumo-gastos">
+
+        <h2>Resumo de gastos</h2>
+
+        <p class="subtitulo-gastos">
+            Distribuição das despesas por categoria
+        </p>
+
+        <div class="categoria-gasto">
+            <div class="categoria-cabecalho">
+                <span>Alimentação</span>
+                <strong>R$ 450,00</strong>
+            </div>
+
+            <div class="barra-gasto">
+                <div class="preenchimento-gasto alimentacao"></div>
+            </div>
+        </div>
+
+        <div class="categoria-gasto">
+            <div class="categoria-cabecalho">
+                <span>Transporte</span>
+                <strong>R$ 200,00</strong>
+            </div>
+
+            <div class="barra-gasto">
+                <div class="preenchimento-gasto transporte"></div>
+            </div>
+        </div>
+
+        <div class="categoria-gasto">
+            <div class="categoria-cabecalho">
+                <span>Moradia</span>
+                <strong>R$ 600,00</strong>
+            </div>
+
+            <div class="barra-gasto">
+                <div class="preenchimento-gasto moradia"></div>
+            </div>
+        </div>
+   </section>
+
+
+    <section class="assistente">
+
+        <h2>Assistente virtual</h2>
+
+        <p class="descricao-assistente">
+            Tem alguma dúvida? Pergunte ao nosso assistente.
+        </p>
+
+        <div class="pergunta-exemplos">
+            <p>Perguntas frequentes:</p>
+
+            <button type="button" class="pergunta-frequente">
+                Como consultar meu saldo?
+            </button>
+
+            <button type="button" class="pergunta-frequente">
+                Como funciona uma transferência?
+            </button>
+
+            <button type="button" class="pergunta-frequente">
+                Como visualizar meus gastos?
+            </button>
+        </div>
+
+        <form id="form-pergunta">
+            <label for="pergunta">Digite sua dúvida</label>
+
+            <div class="campo-pergunta">
+                <input
+                        type="text"
+                        id="pergunta"
+                        placeholder="Escreva sua pergunta..."
+                        autocomplete="off"
+                >
+
+                <button type="submit" id="enviar-pergunta">
+                    Enviar
+                </button>
+            </div>
+        </form>
+
+        <div id="resposta-ia" aria-live="polite">
+            A resposta do assistente aparecerá aqui.
+        </div>
+    </section>
+
+
+
+    <section class="lista-usuarios">
+
+        <h2>Usuários cadastrados</h2>
+
+        <p>Consulta de usuários pela API Java.</p>
+
+        <div id="usuarios-container">
+            <p>Carregando usuários...</p>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="Js.js"></script>
+
+
+
+</body>
+</html>

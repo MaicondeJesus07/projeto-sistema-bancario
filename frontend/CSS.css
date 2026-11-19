@@ -1,0 +1,404 @@
+
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 32px 16px;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Área principal */
+.dashboard {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.cabecalho h1 {
+    color: #0f2d52;
+    margin-bottom: 8px;
+}
+
+.cabecalho p {
+    color: #64748b;
+    margin-top: 0;
+}
+
+/* Cartão de saldo */
+.cartao-saldo {
+    background: linear-gradient(135deg, #0f2d52, #1769aa);
+    color: white;
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(15, 45, 82, 0.18);
+}
+
+.rotulo-saldo {
+    color: #dbeafe;
+    font-size: 15px;
+}
+
+#saldo {
+    font-size: 38px;
+    margin: 14px 0;
+}
+
+.aviso {
+    color: #dbeafe;
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+/* Área dos botões */
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Estilo compartilhado */
+.botao {
+    flex: 1;
+    min-width: 140px;
+    padding: 13px 18px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s,
+    transform 0.2s;
+}
+
+/* Botão Depositar */
+.botao-primario {
+    background-color: white;
+    color: #123c68;
+}
+
+.botao-primario:hover {
+    background-color: #dbeafe;
+    transform: translateY(-2px);
+}
+
+/* Botão Transferir */
+.botao-secundario {
+    background-color: transparent;
+    color: white;
+    border-color: #bfdbfe;
+}
+
+.botao-secundario:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+/* Área de movimentações */
+.movimentacoes {
+    margin-top: 24px;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(15, 45, 82, 0.08);
+}
+
+/* Título da seção */
+.movimentacoes h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #0f2d52;
+}
+
+/* Cada movimentação */
+.movimentacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Remove a linha do último item */
+.movimentacao:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Nome da movimentação */
+.detalhes h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    color: #1e293b;
+}
+
+/* Categoria */
+.detalhes p {
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Valor financeiro */
+.valor {
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Despesas em vermelho */
+.despesa {
+    color: #dc2626;
+}
+
+/* Receitas em verde */
+.receita {
+    color: #16a34a;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 480px) {
+    .movimentacoes {
+        padding: 18px;
+    }
+
+    .movimentacao {
+        gap: 10px;
+    }
+
+    .valor {
+        font-size: 13px;
+    }
+}
+
+/* Resumo de gastos */
+.resumo-gastos {
+    margin-top: 24px;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(15, 45, 82, 0.08);
+}
+
+/* Título e subtítulo */
+.resumo-gastos h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #0f2d52;
+}
+
+.subtitulo-gastos {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Cada categoria */
+.categoria-gasto {
+    margin-bottom: 22px;
+}
+
+.categoria-gasto:last-child {
+    margin-bottom: 0;
+}
+
+/* Nome da categoria e valor */
+.categoria-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.categoria-cabecalho span {
+    color: #334155;
+}
+
+.categoria-cabecalho strong {
+    color: #0f2d52;
+    white-space: nowrap;
+}
+
+/* Fundo das barras */
+.barra-gasto {
+    width: 100%;
+    height: 10px;
+    background-color: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Parte colorida das barras */
+.preenchimento-gasto {
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+/* Proporção de cada gasto */
+.alimentacao {
+    width: 75%;
+    background-color: #2563eb;
+}
+
+.transporte {
+    width: 33.33%;
+    background-color: #0d9488;
+}
+
+.moradia {
+    width: 100%;
+    background-color: #7c3aed;
+}
+
+/* Área do assistente virtual */
+.assistente {
+    margin-top: 24px;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(15, 45, 82, 0.08);
+}
+
+/* Título */
+.assistente h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #0f2d52;
+    font-size: 20px;
+}
+
+/* Descrição */
+.descricao-assistente {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Perguntas frequentes */
+.pergunta-exemplos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.pergunta-exemplos p {
+    flex-basis: 100%;
+    margin: 0 0 4px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Botões das perguntas */
+.pergunta-frequente {
+    padding: 10px 14px;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pergunta-frequente:hover {
+    background-color: #dbeafe;
+}
+
+/* Formulário de pergunta */
+#form-pergunta label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Campo de texto e botão Enviar */
+.campo-pergunta {
+    display: flex;
+    gap: 10px;
+}
+
+#pergunta {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+#pergunta:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+#enviar-pergunta {
+    padding: 12px 18px;
+    background-color: #1769aa;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#enviar-pergunta:hover {
+    background-color: #0f2d52;
+}
+
+/* Área da resposta */
+#resposta-ia {
+    margin-top: 20px;
+    padding: 14px;
+    background-color: #f8fafc;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 480px) {
+    .assistente {
+        padding: 18px;
+    }
+
+    .campo-pergunta {
+        flex-direction: column;
+    }
+
+    #enviar-pergunta {
+        width: 100%;
+    }
+}
+
+
+
+
+
